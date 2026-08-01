@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crear Cuenta</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/cuenta.css">
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<!-- Pantalla de carga -->
+<div id="loader" class="loader-container">
+
+    <div class="loader-card">
+
+        <h2> ¡Preparando tu aventura!</h2>
+
+        <p>Cargando tu mundo curioso...</p>
+
+        <div class="progress">
+
+            <div id="progress-bar"></div>
+
+        </div>
+
+        <span id="progress-text">0%</span>
+
+    </div>
+
+</div>
+
+<body>
+
+    <div class="container">
+
+        <!-- Lado izquierdo -->
+
+        <div class="left-side">
+
+            <h1 class="main-title">
+                ¡Bienvenido a nuestra aventura!
+            </h1>
+
+         </div>
+
+        <!-- Lado derecho -->
+
+        <div class="right-side">
+                <div class="main-title">Crear Cuenta</div>
+            </h2>
+
+            <img src="imagenes/panda.png" alt="Panda" class="panda-img">
+
+            <form class="login-form" action="crearcuenta.php" method="POST">
+
+                <div class="form-group">
+                    <input type="text"
+                        name="nombre" 
+                        placeholder="Nombre completo"
+                        required>
+                   </div>
+
+                   <div class="form-group">
+                       <input type="email"
+                         name="correo"
+                         placeholder="Correo electrónico"
+                         required>
+                    </div>
+
+                  <div class="form-group">
+                       <input type="text"
+                         name="usuario"
+                         placeholder="Nombre de usuario"
+                         required>
+                    </div>
+
+                    <div class="form-group">
+                       <input type="password"
+                         name="password"
+                         placeholder="Contraseña"
+                         required>
+                    </div>
+
+                   <div class="form-group">
+                       <input type="password"
+                         name="confirmar"
+                         placeholder="Confirmar contraseña"
+                         required>
+                    </div>
+
+
+                                     
+                <div class="button-group">
+
+                    <button type="submit" name="registrar">Crear Cuenta</button>
+
+
+                </div>
+
+            </form>
+
+    </div>
+         <script>
+
+function crearCuenta(){
+
+    document.getElementById("loader").style.display="flex";
+
+    let progreso=0;
+
+    const barra=document.getElementById("progress-bar");
+
+    const texto=document.getElementById("progress-text");
+
+    const intervalo=setInterval(function(){
+
+        progreso++;
+
+        barra.style.width=progreso+"%";
+
+        texto.innerHTML=progreso+"%";
+
+        if(progreso>=100){
+
+            clearInterval(intervalo);
+
+            window.location.href=" index.html";
+
+        }
+
+    },30);
+
+}
+
+</script>
+</body>
+
+</html>

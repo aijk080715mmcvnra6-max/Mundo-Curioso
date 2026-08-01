@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Curioso - Bienvenidos</title>
+
+    <link rel="stylesheet" href="CSS/Sesión.css">
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="right-side">
+
+        <h1 class="main-title">
+            ¡BIENVENIDO(A)!
+        </h1>
+
+        <img src="imagenes/panda.png" alt="Panda" class="panda-img">
+
+        <form class="login-form" action="login2.php" method="POST">
+
+            <div class="form-group">
+
+                <input
+                    type="text"
+                    id="usuario"
+                    name="usuario"
+                    placeholder="Usuario"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <input
+                    type="password"
+                    id="contrasena"
+                    name="password"
+                    placeholder="Contraseña 🔑"
+                    required>
+
+            </div>
+
+            <div class="button-group">
+
+                <button
+                    type="submit"
+                    name="login"
+                    class="btn-primary">
+
+                    Iniciar Sesión
+
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-secondary"
+                    onclick="window.location.href='crearcuenta.html'">
+
+                    Crear Cuenta
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
